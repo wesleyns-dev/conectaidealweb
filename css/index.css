@@ -216,6 +216,61 @@
     margin-bottom: 30px;
 }
 
+.container-sobre {
+    background-color: #18181b; /* Tom escuro elegante */
+    color: #ffffff;
+    padding: 5rem 10%; 
+    text-align: left;
+}
+
+.container-sobre h2 {
+    color: rgb(192, 192, 11);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.sobre-descricao {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #d1d5db;
+    max-width: 43.75rem; /* 700px */
+    margin-bottom: 2.5rem;
+}
+
+/* Grid para os 3 pilares */
+.sobre-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
+    gap: 1.5rem;
+}
+
+.card-pilar {
+    background-color: #27272a;
+    padding: 1.875rem;
+    border-radius: 0.5rem; 
+    transition: transform 0.3s ease;
+}
+
+.card-pilar:hover {
+    transform: translateY(-0.3125rem);
+}
+
+.card-pilar i {
+    font-size: 2rem;
+    color: rgb(8, 214, 8);
+    margin-bottom: 1rem;
+}
+
+.card-pilar h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.625rem;
+}
+
+.card-pilar p {
+    font-size: 0.95rem;
+    color: #9ca3af;
+    line-height: 1.5;
+}
 
 /* QUANDO A TELA FOR MENOR QUE 768px (Tablets e Celulares) */
 @media (max-width: 768px) {
