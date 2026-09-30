@@ -1,0 +1,73 @@
+.historia-ideal {
+    background: #c8f0f7;
+    background: linear-gradient(90deg, rgba(200, 240, 247, 0.25) 0%, rgba(151, 219, 222, 0.23) 50%, rgba(184, 242, 242, 0.28) 100%);
+}
+
+.historia-conteudo {
+    display: flex;
+    flex-direction: column;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 20px 0 20px 0;
+
+}
+
+.historia-main,
+.historia-criacao,
+.historia-aracoiaba,
+.historia-desenvolvimento,
+.historia-atual {
+    background-color: #f7f6f6c9; 
+    border: 1px solid #ffffff00;
+    border-radius: 8px;
+    padding: 2.5rem; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    margin: 15px 10px 20px 10px;
+}
+
+h1{
+    text-align: center;
+    font-size: 2rem;
+    background-color: #05697a;
+    border-radius: 25px;
+    color: white;
+    margin: 0 10px 5px 10px;
+}
+
+h2 {
+    text-align: left;
+    background-color: #05697a;
+    color: white;
+    border-radius: 25px;
+    padding-left: 2rem;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 24px 0 14px 0;
+}
+
+.historia-conteudo p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-indent: 32px;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .menu{
+        height: auto;
+    }
+
+    h1{
+        font-size: 0.9rem;
+        padding: 5px;
+    }
+
+    h2{
+        font-size: 0.9rem;
+
+    }
+
+    .historia-conteudo p{
+        font-size: 0.9rem;
+    }
+}
