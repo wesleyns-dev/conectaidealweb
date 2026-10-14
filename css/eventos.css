@@ -16,25 +16,24 @@
     flex-direction: column;
 }
 
-/* Moldura que segura a imagem para travar o zoom dentro dos cantos arredondados */
+/* Container da imagem */
 .event-img-wrapper {
     width: 100%;
-    height: 200px;
-    /* Altura padrão para o banner */
-    border-radius: 12px;
-    /* Cantos arredondados */
+    max-height: 500px; /* Limite de altura para fotos muito compridas não estourarem a tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0f172a; /* Fundo escuro (ou a cor do seu tema) */
+    border-radius: 8px;
     overflow: hidden;
-    /* Esconde a parte da imagem que cresce no zoom */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* A imagem com o efeito de zoom suave */
+/* Imagem dentro do container */
 .img-evento {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease;
-    /* Transição fluida da animação */
+    max-height: 500px;
+    object-fit: contain; /* Encaixa a foto INTEIRA na tela, seja ela vertical ou horizontal */
 }
 
 /* Efeito de Zoom ao passar o mouse por cima do card */
@@ -61,10 +60,6 @@
     margin: 0 0 6px 0;
     font-weight: 600;
     line-height: 1.4;
-}
-
-.resumo-evento {
-    color: rgb(248, 247, 247);
 }
 
 
@@ -108,26 +103,42 @@ main h1 {
         height: auto;
     }
     
+    main{
+        padding-top: 20px;
+    }
     main h1 {
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
 
-    #lista-eventos {
-        display: flex;
-        flex-direction: column;
-        line-height: 0.1;
+    #lista-eventos{
+        margin-top: 30px;
     }
 
-    .resumo-evento {
-        font-size: 0.8rem;
+   /* Ajusta o container/imagem do card na lista de eventos */
+    #lista-eventos img {
+        max-height: 250px;       /* Limita a altura para o card não gigante no celular */
+        width: 100%;
+        object-fit: cover;        /* Corta suavemente para preencher como capa */
+        /* Ou use 'object-fit: contain;' se quiser ver o cartaz inteiro sem cortes */
+        border-radius: 8px;      /* Bordas arredondadas opcionais */
+    }
+
+    /* Se os cards tiverem uma classe própria (ex: .card-evento), ajuste o espaçamento */
+    #lista-eventos > div {
+        margin-bottom: 25px;     /* Espaço entre um card de evento e outro */
     }
 
     .data-evento {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
 
     .titulo-evento {
-        font-size: 1rem;
+        font-size: 0.8rem;
+    }
+
+    #carregar-mais {
+        width: 150px;
+        padding: 10px 15px;
     }
 
 }

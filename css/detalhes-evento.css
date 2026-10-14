@@ -43,18 +43,69 @@ h1{
 
 .event-img-wrapper {
     width: 100%;
-    height: 400px;
+    max-width: 600px;        /* Largura máxima generosa para imagens horizontais */
+    max-height: 450px;       /* Altura máxima para impedir que imagens verticais estourem a tela */
+    margin: 0 auto;          /* Centraliza o bloco na página */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff00; 
+    
     overflow: hidden;
 }
 
-.img-evento{
+.img-evento {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Faz a imagem se adaptar perfeitamente ao campo sem distorcer ao carregar */
-    border-radius: 5px;
-    border-left: 3px solid #00458f;
-    border-bottom: 3px solid #024c9b;
-    padding: 5px 0 5px 5px;
-    box-sizing: border-box;
+    object-fit: contain;     /* ESSENCIAL: Mostra a imagem INTEIRA, sem cortar nem esticar */
+    border-bottom: 1px solid #111827;
+    border-left: 1px solid #111827;
+}
+
+@media (max-width: 768px) {
+    .fundo {
+        padding-top: 10px;
+    }
+    main{
+        display: flex;
+        margin-top: 15px;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #titulo-detalhe{
+        font-size: 1.7rem;
+        text-align: center;
+    }
+
+    #data-local-detalhe{
+        font-size: 0.8rem;
+    }
+
+    .event-img-wrapper {
+        width: 100%;
+        /* Define que o container nunca vai passar de 50% da altura da tela do celular */
+        max-height: 50vh; 
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f8f9fa; /* Cor neutra de fundo para preencher se sobrarem bordas */
+        border-radius: 8px;
+        overflow: hidden;
+        margin-bottom: 15px;
+    }
+
+    .img-evento {
+        width: 100%;
+        height: 100%;
+        object-fit: contain; 
+        max-height: 50vh;
+    }
+
+    #texto-detalhe p{
+    font-size: 1rem; /* Tamanho ideal e legível para celular */
+
+    }
 }
 

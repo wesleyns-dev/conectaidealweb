@@ -153,19 +153,25 @@
     border-bottom: 3px solid #142D54;
 }
 
-.container-ultimo-evento .event-img-wrapper {
-    width: 100%;
-    height: 320px; /* Um banner maior para dar destaque na home */
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgb(0, 0, 0);
-}
-
+/* Container da imagem ajustado */
 .container-ultimo-evento .imagem-evento {
     width: 100%;
+    max-width: 320px;       /* Reduz um pouco a largura máxima */
+    height: 380px;          /* Define uma altura limite elegante para a área do card */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0f172a; /* Fundo escuro para preencher as laterais vazias */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Sombra suave para destacar */
+}
+
+/* Faz a imagem se encaixar sem esticar */
+.container-ultimo-evento .imagem-evento img {
+    width: 100%;
     height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease;
+    object-fit: contain;    /* Mostra o cartaz 100% inteiro sem cortar nada */
 }
 
 .container-ultimo-evento .conteudo-evento {
@@ -224,7 +230,7 @@
 }
 
 .container-sobre h2 {
-    color: rgb(192, 192, 11);
+    color: rgb(8, 161, 172);
     font-size: 2rem;
     margin-bottom: 1rem;
 }
@@ -257,7 +263,7 @@
 
 .card-pilar i {
     font-size: 2rem;
-    color: rgb(8, 214, 8);
+    color: rgb(105, 205, 235);
     margin-bottom: 1rem;
 }
 
