@@ -34,6 +34,11 @@ function exibirEventos() {
       </div>
     `;
 
+    // Adiciona o evento de clique para redirecionar para a página de detalhes com o ID na URL
+    card.addEventListener("click", () => {
+      window.location.href = `detalhes-evento.html?id=${evento.id}`;
+    });
+
     container.appendChild(card);
   });
 

@@ -272,7 +272,7 @@
     line-height: 1.5;
 }
 
-/* QUANDO A TELA FOR MENOR QUE 768px (Tablets e Celulares) */
+
 @media (max-width: 768px) {
 
     .menu {

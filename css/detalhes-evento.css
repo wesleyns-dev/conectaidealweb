@@ -1,0 +1,60 @@
+.fundo{
+ background-color: #ffffff91;
+ padding: 40px 20px;
+}
+
+main {
+    display: grid;
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    grid-template-areas: 
+    "titulo titulo"
+    "data-evento  data-evento"
+    "event-img-wrapper texto-completo";
+
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    justify-content: center;
+}
+
+.titulo-detalhe{ grid-area: titulo;}
+.data-evento{ grid-area: data-evento;}
+.event-img-wrapper{ grid-area: event-img-wrapper;}
+.texto-completo{ grid-area: texto-completo;}
+
+main p{
+    font-size: 1.1rem;
+    line-height: 1.3;
+    margin-left: 5px;
+    margin-bottom: 10px;
+}
+
+h1{
+    font-size: 2.4rem;
+}
+
+.data-evento{
+    font-size: 1.1rem;
+    color: rgb(73, 73, 73);
+}
+
+.event-img-wrapper {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.img-evento{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a imagem se adaptar perfeitamente ao campo sem distorcer ao carregar */
+    border-radius: 5px;
+    border-left: 3px solid #00458f;
+    border-bottom: 3px solid #024c9b;
+    padding: 5px 0 5px 5px;
+    box-sizing: border-box;
+}
+
